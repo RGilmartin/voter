@@ -39,7 +39,7 @@
                     updateDoc(ref, {option1: {name: data.option1.name, value: data.option1.value+=1}});
                      goto('thanks');
                 }} id="op1">
-                    <p>{data.option1.name + data.option1.value}</p>
+                    <p>{data.option1.name}</p>
                 </button>
                 <button on:click={() => 
                     {
