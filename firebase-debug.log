@@ -1,0 +1,52 @@
+[debug] [2023-10-03T04:31:45.703Z] ----------------------------------------------------------------------
+[debug] [2023-10-03T04:31:45.704Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ryan2\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-03T04:31:45.705Z] CLI Version:   12.6.1
+[debug] [2023-10-03T04:31:45.705Z] Platform:      win32
+[debug] [2023-10-03T04:31:45.705Z] Node Version:  v18.18.0
+[debug] [2023-10-03T04:31:45.706Z] Time:          Tue Oct 03 2023 00:31:45 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-10-03T04:31:45.706Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-03T04:31:45.766Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-03T04:31:45.766Z] > authorizing via signed-in user (ryan22gil@gmail.com)
+[debug] [2023-10-03T04:31:45.767Z] [iam] checking project office-vote for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-03T04:31:45.768Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/office-vote:testIamPermissions [none]
+[debug] [2023-10-03T04:31:45.768Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/office-vote:testIamPermissions x-goog-quota-user=projects/office-vote
+[debug] [2023-10-03T04:31:45.769Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/office-vote:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-03T04:31:45.980Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/office-vote:testIamPermissions 200
+[debug] [2023-10-03T04:31:45.980Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/office-vote:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-03T04:31:45.981Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/office-vote [none]
+[debug] [2023-10-03T04:31:46.245Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/office-vote 200
+[debug] [2023-10-03T04:31:46.245Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/office-vote {"projectId":"office-vote","projectNumber":"946893048079","displayName":"office-vote","name":"projects/office-vote","resources":{"hostingSite":"office-vote","realtimeDatabaseInstance":"office-vote-default-rtdb"},"state":"ACTIVE","etag":"1_5e2eda4d-1a8c-4ee3-a420-336a34a1125a"}
+[debug] [2023-10-03T04:31:46.246Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/office-vote [none]
+[debug] [2023-10-03T04:31:46.501Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/office-vote 200
+[debug] [2023-10-03T04:31:46.501Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/office-vote {"projectId":"office-vote","projectNumber":"946893048079","displayName":"office-vote","name":"projects/office-vote","resources":{"hostingSite":"office-vote","realtimeDatabaseInstance":"office-vote-default-rtdb"},"state":"ACTIVE","etag":"1_5e2eda4d-1a8c-4ee3-a420-336a34a1125a"}
+[debug] [2023-10-03T04:31:49.075Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/office-vote/sites pageToken=&pageSize=10
+[debug] [2023-10-03T04:31:49.666Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/office-vote/sites 200
+[debug] [2023-10-03T04:31:49.666Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/office-vote/sites {"sites":[{"name":"projects/office-vote/sites/office-vote","defaultUrl":"https://office-vote.web.app","appId":"1:946893048079:web:1b31b6df09a5bd30bad67a","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-03T04:31:49.666Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:946893048079:web:1b31b6df09a5bd30bad67a/config [none]
+[debug] [2023-10-03T04:31:50.062Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:946893048079:web:1b31b6df09a5bd30bad67a/config 200
+[debug] [2023-10-03T04:31:50.062Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:946893048079:web:1b31b6df09a5bd30bad67a/config {"projectId":"office-vote","appId":"1:946893048079:web:1b31b6df09a5bd30bad67a","databaseURL":"https://office-vote-default-rtdb.firebaseio.com","storageBucket":"office-vote.appspot.com","apiKey":"AIzaSyDGpRbJyuhM1t3F5zxUM3neDgG69tZyIP8","authDomain":"office-vote.firebaseapp.com","messagingSenderId":"946893048079"}
+[info] 
+   Thank you for trying our experimental support for SvelteKit on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-10-03T04:31:58.503Z] Error: ENOENT: no such file or directory, open 'C:\Users\ryan2\desktop\dev\voter\.svelte-kit/output/client/vite-manifest.json'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at read (file:///C:/Users/ryan2/Desktop/dev/voter/node_modules/@sveltejs/kit/src/utils/filesystem.js:182:12)
+    at Object.handler (file:///C:/Users/ryan2/Desktop/dev/voter/node_modules/@sveltejs/kit/src/exports/vite/index.js:729:40)
+    at async PluginDriver.hookParallel (file:///C:/Users/ryan2/desktop/dev/voter/node_modules/rollup/dist/es/shared/node-entry.js:25466:17)
+    at async file:///C:/Users/ryan2/desktop/dev/voter/node_modules/rollup/dist/es/shared/node-entry.js:26792:13
+    at async catchUnfinishedHookActions (file:///C:/Users/ryan2/desktop/dev/voter/node_modules/rollup/dist/es/shared/node-entry.js:25910:16)
+    at async Module.build (file:///C:/Users/ryan2/desktop/dev/voter/node_modules/vite/dist/node/chunks/dep-df561101.js:48011:22)
+    at async build (C:\Users\ryan2\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:63:5)
+    at async build (C:\Users\ryan2\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\sveltekit\index.js:19:5)
+[error] 
+[error] Error: An unexpected error has occurred.
