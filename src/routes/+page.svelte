@@ -21,6 +21,9 @@
     const firestore = getFirestore(app);
     const auth = getAuth(app);
     const storage = getStorage(app);
+
+
+    const colors = ['#FFBA49', "#20A39E", "#ef5b5b", '#23001E'];
 </script>
 
 <FirebaseApp {auth} {firestore} {storage}>
@@ -64,6 +67,20 @@
 </FirebaseApp>
 
 <style>
+
+    .page {
+        background-color: #FFBA49;
+        animation: mymove 45s infinite
+    }
+
+@keyframes mymove {
+  0% {background-color: #FFBA49;}
+  25% {background-color: #ef5b5b;}
+  50% {background-color: #20A39E;}
+  75% {background-color: #23001E;}
+  100% {background-color: #FFBA49;}
+}
+
     .page {
         margin: -8px;
         padding: 0;
@@ -75,7 +92,6 @@
         flex-direction: column;
         height: 100vh;
         width: 100vw;
-        background-color: salmon;
     }
 
     #dataChart td{
@@ -108,11 +124,11 @@
     #qr-show {
         height: 15rem;
         width: 30rem;
-        background-color: darkslategrey;
+        background-color: #464F51;
         align-self: center;
         margin-top: 7rem;
         border-radius: 10px;
-        border: 3px solid rgb(26, 44, 44);
+        border: 3px solid rgb(17, 29, 29);
         display: flex;
         text-align: center;
     }
