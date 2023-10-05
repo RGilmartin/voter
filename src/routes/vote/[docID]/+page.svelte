@@ -6,6 +6,8 @@
 	import { getStorage } from 'firebase/storage';
     import { goto } from '$app/navigation';
     import 'charts.css';
+    import {page} from '$app/stores';
+	import Navbar from '../../../components/navbar.svelte';
 
     // Initialize Firebase
     const firebaseConfig = {
@@ -23,12 +25,13 @@
     const auth = getAuth(app);
     const storage = getStorage(app);
 
-    const refer = "questions/dogcat";
+    const docID = $page.params.docID;
 </script>
 
 <FirebaseApp {firestore} {auth} {storage}>
-    <Doc ref="{refer}" let:data let:ref let:firestore>
+    <Doc ref="/questions/{docID}" let:data let:ref let:firestore>
         <div id="page">
+            <Navbar/>
             <div id="title">
                 <h1>{data.title}</h1>
             </div>
@@ -37,14 +40,14 @@
                 <button on:click={() => 
                 {
                     updateDoc(ref, {option1: {name: data.option1.name, value: data.option1.value+=1}});
-                     goto('thanks');
+                     goto('/thanks');
                 }} id="op1">
                     <p>{data.option1.name}</p>
                 </button>
                 <button on:click={() => 
                     {
                         updateDoc(ref, {option2: {name: data.option2.name, value: data.option2.value+=1}});
-                         goto('thanks');
+                         goto('/thanks');
                     }} id="op2">
                     <p>{data.option2.name}</p>
                 </button>
@@ -63,7 +66,7 @@
         font-family: Arial, Helvetica, sans-serif;
         height: 100vh;
         width: 100vw;
-        background-color: salmon;
+        background-color: #922D50;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -81,7 +84,6 @@
     }
 
     #page button {
-        height: 78vh;
         width: 48vw;
         border: none;
         border-radius: 10px;
@@ -89,15 +91,15 @@
     }
 
     #op1 {
-        background-color: mediumseagreen;
+        background-color: #FBFBFB ;
     }
 
     #op2 {
-        background-color: navy;
+        background-color: #97EAD2;
     }
 
     #page button p {
-        color:#fafafa;
+        color:#151515;
         font-size: 2rem;
         font-weight: bolder;
         text-shadow: 1px 1px 1px #aaa;
